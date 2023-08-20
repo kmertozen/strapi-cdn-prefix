@@ -1,0 +1,54 @@
+{
+  "name": "cdn-prefix",
+  "version": "1.0.0",
+  "description": "Prepend image urls with CDN Prefix",
+  "strapi": {
+    "name": "cdn-prefix",
+    "description": "Prepend image urls with CDN Prefix",
+    "kind": "plugin",
+    "displayName": "Cdn Prefix"
+  },
+  "dependencies": {
+    "@strapi/design-system": "^1.6.3",
+    "@strapi/helper-plugin": "^4.6.0",
+    "@strapi/icons": "^1.6.3",
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.4",
+    "styled-components": "^5.3.6"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.4",
+    "styled-components": "^5.3.6",
+    "@strapi/strapi": "^4.x"
+  },
+  "author": {
+    "name": "Mert Ozen",
+    "url": "https://github.com/kmertozen"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kmertozen/strapi-cdn-prefix"
+  },
+  "maintainers": [
+    {
+      "name": "Mert Ozen"
+    }
+  ],
+  "keywords": [
+    "strapi",
+    "strapi-plugin",
+    "cdn-prefix"
+  ],
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
