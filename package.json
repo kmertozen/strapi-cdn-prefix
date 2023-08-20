@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-cdn-prefix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Prepend image urls with CDN Prefix",
   "strapi": {
     "name": "cdn-prefix",
@@ -30,7 +30,6 @@
   "author": {
     "name": "Mert Ozen",
     "url": "https://github.com/kmertozen"
-
   },
   "repository": {
     "type": "git",
