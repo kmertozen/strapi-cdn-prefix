@@ -20,8 +20,6 @@ module.exports = ({ strapi }) => {
   const merge = (target, source) => {
     for (const key of Object.keys(source)) {
       if (Array.isArray(source[key])) {
-        console.log("key", key);
-        console.log("target", target[key]);
         Object.assign(source[key], [
           ...new Set(target[key].concat(source[key])),
         ]);
