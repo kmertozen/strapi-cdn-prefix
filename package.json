@@ -1,12 +1,12 @@
 {
-  "name": "cdn-prefix",
+  "name": "strapi-plugin-cdn-prefix",
   "version": "1.0.0",
   "description": "Prepend image urls with CDN Prefix",
   "strapi": {
     "name": "cdn-prefix",
     "description": "Prepend image urls with CDN Prefix",
     "kind": "plugin",
-    "displayName": "Cdn Prefix"
+    "displayName": "CDN Prefix"
   },
   "dependencies": {
     "@strapi/design-system": "^1.6.3",
