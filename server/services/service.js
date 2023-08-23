@@ -9,10 +9,11 @@ const replaceUploadsWithCdn = (obj) => {
     }
   } else if (typeof obj === "object" && obj !== null) {
     for (let key in obj) {
-      if (typeof obj[key] === "string" && obj[key].includes("/uploads")) {
+      if (typeof obj[key] === "string" && obj[key].startsWith("/uploads")) {
         obj[key] = obj[key].replace(/\/uploads/g, CDNKEY);
       } else {
-        obj[key] = replaceUploadsWithCdn(obj[key]);
+        console.log("obj[key] -->", replaceUploadsWithCdn(obj[key]));
+        //obj[key] = replaceUploadsWithCdn(obj[key]);
       }
     }
   }
