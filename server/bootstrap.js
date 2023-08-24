@@ -5,10 +5,10 @@ module.exports = ({ strapi }) => {
 
   strapi.db.lifecycles.subscribe({
     afterFindOne(event) {
-      event = plugin.replaceUploadsWithCdn(event);
+      event = plugin.replaceUploadsWithCdnFindOne(event);
     },
     afterFindMany(event) {
-      event = plugin.replaceUploadsWithCdn(event);
-    },
+      event = plugin.replaceUploadsWithCdnFindMany(event);
+    }
   });
 };
