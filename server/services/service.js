@@ -19,14 +19,23 @@ const replaceUploadsWithCdnFindOne = (obj) => {
     return obj;    
 } 
 
-const replaceUploadsWithCdnFindMany = (obj) => {  
-  if(obj?.model?.uid == "plugin::upload.file"){
-    if (obj.result.length > 0) {
-      obj["result"].forEach((result, i) => {
-        obj["result"][i]["url"] = obj["result"][i]["url"].replace(/\/uploads/g, CDNKEY);;
-      });
+const replaceUploadsWithCdnFindMany = (objs) => { 
+  if(objs?.model?.uid == "plugin::upload.file" && objs?.result?.length > 0){
+      for (const obj of objs["result"]) {
+        if (obj.formats) {
+          for (const formatKey in obj.formats) {
+            if (obj.formats.hasOwnProperty(formatKey)) {
+              const formatObj = obj.formats[formatKey];
+              if (formatObj && formatObj.url) {
+                obj.formats[formatKey].url = obj.formats[formatKey].url.replace(/\/uploads/g, CDNKEY)
+              }
+            }
+          }
+        }else {
+          obj.url= obj.url.replace(/\/uploads/g, CDNKEY)
+        }
+      }
     }
-  }
 } 
 
 module.exports = ({ strapi }) => ({
